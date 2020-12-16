@@ -124,6 +124,25 @@ namespace isv_net_sdk
             return null;
         }
 
+        public new CommonResponse GetCommonResponse(CommonRequest request)
+        {
+            var httpResponse = DoAction(request.BuildRequest());
+            string data = null;
+            if (httpResponse.Content != null)
+            {
+                data = Encoding.UTF8.GetString(httpResponse.Content);
+            }
+
+            var response = new CommonResponse
+            {
+                Data = data,
+                HttpResponse = httpResponse,
+                HttpStatus = httpResponse.Status
+            };
+
+            return response;
+        }
+
         private HttpRequest SignRequest<T>(AcsRequest<T> request, Signer signer, AlibabaCloudCredentials credentials, FormatType? format, ProductDomain domain)
         {
             var map = new Dictionary<string, string>(request.QueryParameters);
