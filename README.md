@@ -15,6 +15,14 @@
 - 找阿里云企业工作台团队，提供 OpenAPI 访问凭证(consoleKey、consoleSecret)
 
 
+## SDK安装
+
+```
+dotnet add package aliyun-console-bench-net-sdk --version 1.0.1
+```
+
+具体使用参考 [nuget](https://www.nuget.org/packages/aliyun-console-bench-net-sdk/)
+
 ## 快速使用 
 
 企业工作台的业务模式分为 工作台托管、聚石塔自管 两种模式，因此API调用也有针对性区分。
@@ -95,6 +103,10 @@ namespace test_oneConsole
 
 - endpoint: 测试环境下需要 host 绑定 114.55.202.134 console-bench.aliyuncs.com
 
+
+## 特殊说明
+
+[OSS OpenAPI 的使用](./oss.md)
 
 ## 许可证
 
