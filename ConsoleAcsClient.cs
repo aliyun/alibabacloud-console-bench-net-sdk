@@ -55,6 +55,15 @@ namespace isv_net_sdk
             string regionId,
             AlibabaCloudCredentials credentials, Signer signer, FormatType? format, List<Endpoint> endpoints)
         {
+            if(string.IsNullOrEmpty(request.Product))
+            {
+                throw new ArgumentException("product is required!", "request.product");
+            }
+            if(string.IsNullOrEmpty(request.Version))
+            {
+                throw new ArgumentException("version is required!", "request.version");
+            }
+            
             var httpStatusCode = "";
             var retryAttemptTimes = 0;
             ClientException exception;
