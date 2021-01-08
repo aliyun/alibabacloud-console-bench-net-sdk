@@ -18,7 +18,7 @@
 ## SDK安装
 
 ```
-dotnet add package aliyun-console-bench-net-sdk --version 1.0.1
+dotnet add package aliyun-console-bench-net-sdk --version 1.0.2
 ```
 
 具体使用参考 [nuget](https://www.nuget.org/packages/aliyun-console-bench-net-sdk/)
@@ -113,3 +113,4 @@ namespace test_oneConsole
 [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
+
